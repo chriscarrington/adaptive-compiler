@@ -1,0 +1,21 @@
+{
+  "version": "v111",
+  "promoted": true,
+  "change": "repair dormant modulo expression VM semantics and promote bounded modulo expression/print fusions",
+  "opcodes": ["MOD_CONST", "MOD_VAR", "PRINT_MOD_CONST"],
+  "gates": {
+    "pytest": {"passed": 540, "failed": 0},
+    "bounded_differential": {"cases": 272, "failures": 0, "domain": "mod-var x=-8..8, divisor=-5..5 excluding 0 (170); mod-const x=-8..8 across divisors -5,-2,-1,1,2,5 (102)"},
+    "corpus": {"cases": 194, "correctness_failures": 0, "baseline_mean_ops": 2.5051546391752577, "candidate_mean_ops": 2.448453608247423, "baseline_mean_steps": 2.3608247422680413, "candidate_mean_steps": 2.304123711340206, "regressions": 0, "improved_cases": 5},
+    "targets": {
+      "expr_mod_const_fusion": {"baseline": [6,6], "candidate": [4,4]},
+      "expr_mod_var_fusion": {"baseline": [6,6], "candidate": [4,4]},
+      "print_mod_const_fusion": {"baseline": [4,4], "candidate": [1,1]}
+    }
+  },
+  "prefilter": {
+    "store_mod_const_fusion": "not promoted: direct toggle is shadowed by mature STORE_PRINT composition on its target",
+    "store_mod_var_fusion": "not promoted: direct toggle is shadowed by mature STORE_PRINT composition on its target"
+  },
+  "policy": {"enabled": ["expr_mod_const_fusion","expr_mod_var_fusion","print_mod_const_fusion"], "kept_disabled": ["store_mod_const_fusion","store_mod_var_fusion"]}
+}
