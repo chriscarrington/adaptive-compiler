@@ -1,0 +1,1 @@
+{"version":"recovered-v111-interface","enabled":["expr_mod_const_fusion","expr_mod_var_fusion","print_mod_const_fusion"],"note":"Reconstructed runnable interface from repository tests/reports; not asserted byte-for-byte equivalent to missing historical v111 source."}
