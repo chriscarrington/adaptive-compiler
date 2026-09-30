@@ -1,0 +1,14 @@
+{
+  "version": "v110",
+  "promoted": true,
+  "change": "decrement-only counted loop + terminal counter print fusion",
+  "opcode": "COUNTED_DEC_GT_ZERO_TERMINAL",
+  "gates": {
+    "pytest": {"passed": 267, "failed": 0},
+    "bounded_differential": {"cases": 33, "failures": 0, "domain": "initial counter -8..24"},
+    "negative_matcher_guards": {"cases": 2, "failures": 0},
+    "corpus": {"cases": 171, "correctness_failures": 0, "baseline_mean_ops": 2.538011695906433, "candidate_mean_ops": 2.52046783625731, "baseline_mean_steps": 2.327485380116959, "candidate_mean_steps": 2.2690058479532165, "regressions": 0},
+    "target": {"baseline_ops": 5, "baseline_steps": 12, "candidate_ops": 2, "candidate_steps": 2}
+  },
+  "policy": {"new_boolean_enabled": false, "family": "counted_loop_terminal_fusion"}
+}
