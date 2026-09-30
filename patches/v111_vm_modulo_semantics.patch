@@ -1,0 +1,4 @@
+# v111 VM semantic repair
+# Apply inside VM opcode dispatch after DIV_VAR:
+elif op=="MOD_CONST": stack.append(env[ins[1]] % ins[2])
+elif op=="MOD_VAR": stack.append(env[ins[1]] % env[ins[2]])
