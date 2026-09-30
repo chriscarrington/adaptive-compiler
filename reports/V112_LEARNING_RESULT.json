@@ -1,0 +1,10 @@
+{
+  "version":"v112",
+  "promoted":true,
+  "rule":"branch_print_select_fusion",
+  "local_full_suite":{"passed":1046,"failed":0},
+  "bounded_differential":{"accepted_shape_cases":504,"negative_matcher_guards":2,"failures":0},
+  "corpus":{"cases":194,"correctness_failures":0,"regressions":0,"improved_cases":27,"baseline_mean_ops":2.448453608247423,"candidate_mean_ops":2.0309278350515463,"baseline_mean_steps":2.304123711340206,"candidate_mean_steps":2.0257731958762886},
+  "direct_target":{"baseline_ops":4,"baseline_steps":3,"candidate_ops":1,"candidate_steps":1},
+  "remote_ci_scope":"isolated differential reproduction harness across OS/Python matrix; separate from full local 1046-test promotion gate"
+}
